@@ -7,6 +7,10 @@ alias gits='git st'
 alias gita='git add -A :/'
 alias gitd='git df'
 alias gitc='git ci -m'
+alias rs='rails server'
+alias rc='rails console'
+alias rcs='rails console --sandbox'
+alias dev='cd ~/kitcheck/'
 
 greprails() { grep $1 -r --exclude-dir="coverage" --exclude-dir="tmp" $2; }
 far() { find $1 -type f -name '*' -exec sed -i '' s/$2/$3/g {} + ; }
