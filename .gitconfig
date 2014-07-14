@@ -43,22 +43,11 @@
   interactive = auto
   status = auto
 [core]
-  excludesfile = /Users/wbrady/.gitignore
-  editor = subl -w
   pager = less -r
 [push]
   default = current
-[sendemail]
-  from = Brandon Marc-Aurele <bmarcaur@gmail.com>
-  chainreplyto = false
-  confirm = auto
-  suppresscc = all
-  smtpencryption = tls
-  smtpserver = smtp.gmail.com
-  smtpuser = bmarcaur@gmail.com
-  smtpserverport = 587
 [user]
-  name = Brandon Marc-Aurele
-  email = bmarcaur@gmail.com
+  name = Alex
+  email = alex@kitcheck.com
 [github]
-  user = bmarcaur
+  user = alexpjohnson
