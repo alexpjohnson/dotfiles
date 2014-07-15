@@ -11,6 +11,7 @@ alias rs='rails server'
 alias rc='rails console'
 alias rcs='rails console --sandbox'
 alias dev='cd ~/kitcheck/'
+alias dotfiles = 'cd ~/projects/dotfiles'
 
 greprails() { grep $1 -r --exclude-dir="coverage" --exclude-dir="tmp" $2; }
 far() { find $1 -type f -name '*' -exec sed -i '' s/$2/$3/g {} + ; }
