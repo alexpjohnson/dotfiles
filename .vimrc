@@ -27,6 +27,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-endwise'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
