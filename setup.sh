@@ -32,8 +32,6 @@ rbenv rehash
 gem install rails
 rbenv rehash
 
-ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-
 # Unpack Dotfiles
 ./unpack.sh
 

@@ -22,7 +22,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-export EDITOR='subl'
+export EDITOR='vim'
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 
