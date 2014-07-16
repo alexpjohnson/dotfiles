@@ -57,6 +57,8 @@ bash_prompt() {
 PROMPT_COMMAND=bash_prompt_command 
 bash_prompt
 
+source ~/git-completion.bash
+
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
 
