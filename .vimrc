@@ -117,6 +117,9 @@ set noshowmode
 "" Tagbar
 nmap <Leader>t :TagbarToggle<CR>
 
+""" Nerd Commenter
+nmap <C-_> <plug>NERDCommenterToggle<CR>
+
 """ Autocommands
 if has("autocmd")
   augroup vimrcEx
