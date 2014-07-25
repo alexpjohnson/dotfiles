@@ -28,6 +28,7 @@ Bundle 'jlanzarotta/bufexplorer'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
+Bundle 'valloric/youcompleteme'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
@@ -119,6 +120,9 @@ nmap <Leader>t :TagbarToggle<CR>
 
 """ Nerd Commenter
 nmap <C-_> <plug>NERDCommenterToggle<CR>
+
+"""Vim
+let g:ycm_register_as_syntastic_checker = 0
 
 """ Autocommands
 if has("autocmd")
