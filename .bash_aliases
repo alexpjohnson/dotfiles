@@ -11,6 +11,7 @@ alias rs='rails server'
 alias rc='rails console'
 alias rcs='rails console --sandbox'
 alias dev='cd ~/kitcheck/'
+alias api='cd ~/kitcheck/kc-api'
 alias dotfiles='cd ~/projects/dotfiles'
 
 greprails() { grep $1 -r --exclude-dir="coverage" --exclude-dir="tmp" $2; }
