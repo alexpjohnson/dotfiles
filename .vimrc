@@ -108,6 +108,36 @@ set mouse=a " Enable mouse
 set ttymouse=xterm2 " Use mouse scrolling in terminal window
 
 """ Plugin Configuration
+let g:rails_gem_projections = {
+	      \ "active_model_serializers": {
+	      \   "app/serializers/*_serializer.rb": {
+	      \     "command": "serializer",
+	      \     "affinity": "model",
+        \     "test": "test/serializers/%s_spec.rb",
+        \     "related": "app/models/%s.rb",
+        \     "template": "class %SSerializer < ActiveModel::Serializer\nend"
+        \     }
+        \   }
+        \ }
+
+let g:rails_projections = {
+        \ "app/service_objects/*.rb": {
+        \   "command": "service",
+        \   "test": "test/service_objects/%s_test.rb",
+        \ },
+        \ "app/presenters/*.rb": {
+        \   "command": "presenter",
+        \   "test": "test/presenters/%s_presenter_test.rb"
+        \ },
+        \ "app/forms/*_form.rb": {
+        \   "command": "form",
+        \   "test": "test/forms/%s_form_test.rb"
+        \ },
+        \ "app/reports/*_report.rb": {
+        \   "command": "report",
+        \   "test": "test/reports/*_report_test.rb"
+        \ }
+        \}
 
 "" Powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim

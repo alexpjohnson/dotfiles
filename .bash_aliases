@@ -13,6 +13,8 @@ alias rcs='rails console --sandbox'
 alias dev='cd ~/kitcheck/'
 alias api='cd ~/kitcheck/kc-api'
 alias dotfiles='cd ~/projects/dotfiles'
+alias rake='bundle exec rake'
+alias prunelocal="git branch --merged master | grep -v 'master$' | xargs git branch -d"
 
 greprails() { grep $1 -r --exclude-dir="coverage" --exclude-dir="tmp" $2; }
 far() { find $1 -type f -name '*' -exec sed -i '' s/$2/$3/g {} + ; }
