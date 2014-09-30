@@ -127,6 +127,8 @@ let g:rails_projections = {
         \ },
         \ "app/presenters/*.rb": {
         \   "command": "presenter",
+        \   "affinity": "model",
+        \   "related": "app/models/%s.rb",
         \   "test": "test/presenters/%s_presenter_test.rb"
         \ },
         \ "app/forms/*_form.rb": {
@@ -136,6 +138,12 @@ let g:rails_projections = {
         \ "app/reports/*_report.rb": {
         \   "command": "report",
         \   "test": "test/reports/*_report_test.rb"
+        \ },
+        \ "app/controllers/api/**/*_controller.rb": {
+        \   "command": "controller",
+        \   "test": "test/controllers/*_controller_test.rb",
+        \   "related": "app/models/%s.rb",
+        \   "affinity": "controller"
         \ }
         \}
 
