@@ -32,6 +32,9 @@ rbenv rehash
 gem install rails
 rbenv rehash
 
+gem install hookup
+rbenv rehash
+
 # Unpack Dotfiles
 ./unpack.sh
 
