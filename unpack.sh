@@ -13,5 +13,11 @@ do
 	link $file
 done
 
+echo "Creating git template folder"
+mkdir -p $HOME/.git_templates/hooks
+
+echo "Linking git hooks to $HOME"
+ln -s $current/.git_templates/hooks/* $HOME/.git_templates/hooks
+
 echo "Sourcing the bash_profile"
 source $HOME/.bash_profile
