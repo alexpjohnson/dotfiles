@@ -29,6 +29,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
 Bundle 'valloric/youcompleteme'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
@@ -170,6 +172,9 @@ nmap <Leader>t :TagbarToggle<CR>
 
 """ Nerd Commenter
 nmap <C-_> <plug>NERDCommenterToggle<CR>
+
+"""Text Obj Ruby Block
+runtime macros/matchit.vim
 
 """Vim
 let g:ycm_register_as_syntastic_checker = 0
