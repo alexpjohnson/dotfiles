@@ -31,6 +31,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'valloric/youcompleteme'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'terryma/vim-multiple-cursors'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
