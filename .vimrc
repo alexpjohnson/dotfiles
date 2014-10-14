@@ -32,10 +32,13 @@ Bundle 'valloric/youcompleteme'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'wesQ3/vim-windowswap'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
 syntax on " Enable syntax highlighting
+
+set re=1
 
 "" Watches for changes in vim configs and automatically refreshes your .vimrc
 augroup myvimrc
