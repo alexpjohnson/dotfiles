@@ -2,7 +2,7 @@
 begin
   require 'hirb'
   HIRB_LOADED = true
-rescue LoadError
+rescue LoadError => err
   warn "Couldn't load hirb: #{err}"
   HIRB_LOADED = false
 end

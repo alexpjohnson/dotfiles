@@ -24,8 +24,8 @@ brew install rbenv
 brew install ruby-build
 
 # Install Ruby
-rbenv install 2.1.0
-rbenv global 2.1.0
+rbenv install 2.1.5
+rbenv global 2.1.5
 
 # Install some gems
 rbenv rehash

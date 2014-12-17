@@ -44,7 +44,7 @@
   status = auto
 [core]
   pager = less -r
-	excludesfile = ~/projects/dotfiles/.gitignore
+	excludesfile = /Users/alex/projects/dotfiles/.gitignore
 [push]
   default = current
 [user]
@@ -54,3 +54,9 @@
   user = alexpjohnson
 [init]
 	templatedir = ~/.git_template
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
