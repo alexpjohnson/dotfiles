@@ -183,6 +183,10 @@ runtime macros/matchit.vim
 """Vim
 let g:ycm_register_as_syntastic_checker = 0
 
+if has('mouse_sgr')
+  set ttymouse=sgr
+endif
+
 """ Autocommands
 if has("autocmd")
   augroup vimrcEx
