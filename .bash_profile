@@ -26,7 +26,6 @@ export EDITOR='vim'
 
 export NODE_PATH=/usr/local/lib/node_modules
 export PATH="/usr/local/share/npm/bin:$PATH"
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
