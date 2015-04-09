@@ -13,7 +13,6 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/powerline'
 Bundle 'majutsushi/tagbar'
 Bundle 'paredit.vim'
 Bundle 'puppetlabs/puppet-syntax-vim'
@@ -33,6 +32,7 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'wesQ3/vim-windowswap'
+Bundle 'bling/vim-airline'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
@@ -103,9 +103,10 @@ set nostartofline " Don't jump to start of line with movements
 set autoread " Automatically read changed files
 
 "" Theme
+syntax enable
 set background=dark
 colorscheme solarized
-set guifont=Inconsolata\ for\ Powerline:h16 "Font
+"set guifont=Inconsolata\ for\ Powerline:h16 "Font
 set t_Co=256 " Tell terminal to use 256 colors
 set title " Turn on title bar support
 
@@ -165,12 +166,14 @@ let g:rails_projections = {
       \ }
       \}
 
+"" Airline
+let g:airline_powerline_fonts = 1
+
 "" Powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set noshowmode
-
 "" Tagbar
 nmap <Leader>t :TagbarToggle<CR>
 

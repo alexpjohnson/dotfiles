@@ -22,7 +22,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/bin
-export EDITOR='vim'
+export EDITOR='nvim'
 
 export NODE_PATH=/usr/local/lib/node_modules
 export PATH="/usr/local/share/npm/bin:$PATH"
