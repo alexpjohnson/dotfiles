@@ -29,6 +29,8 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
+# redis
+export KC_API_REDIS_URL=redis://localhost:6379
 
 if [ -d $RBENV_ROOT ]; then
   export PATH="$RBENV_ROOT/bin:$PATH"

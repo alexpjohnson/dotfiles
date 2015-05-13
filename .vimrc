@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 
 " Plugins:
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'flazz/vim-colorschemes'
 Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
@@ -33,6 +34,7 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'wesQ3/vim-windowswap'
 Bundle 'bling/vim-airline'
+Bundle 'powerline/fonts'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
@@ -104,9 +106,7 @@ set autoread " Automatically read changed files
 
 "" Theme
 syntax enable
-set background=dark
-colorscheme solarized
-"set guifont=Inconsolata\ for\ Powerline:h16 "Font
+set guifont=Inconsolata-g "Font
 set t_Co=256 " Tell terminal to use 256 colors
 set title " Turn on title bar support
 
