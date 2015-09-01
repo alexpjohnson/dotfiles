@@ -35,6 +35,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'wesQ3/vim-windowswap'
 Bundle 'bling/vim-airline'
 Bundle 'powerline/fonts'
+Bundle 'gosukiwi/vim-atom-dark'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
@@ -109,10 +110,13 @@ syntax enable
 set guifont=Inconsolata-g "Font
 set t_Co=256 " Tell terminal to use 256 colors
 set title " Turn on title bar support
-
+"hi IncSearch ctermfg=White	ctermbg=Black guifg=White	guibg=Black
+"hi Search ctermfg=White	ctermbg=Black guifg=White	guibg=Black
+hi IncSearch cterm=reverse ctermbg=57 ctermfg=16 gui=reverse guibg=#000000 guifg=#C4BE89
+hi Search term=reverse ctermbg=61 ctermfg=16 gui=NONE guibg=#B4EC85 guifg=#000000
 "" Mouse settings
 set mouse=a " Enable mouse
-set ttymouse=xterm2 " Use mouse scrolling in terminal window
+"set ttymouse=xterm2 " Use mouse scrolling in terminal window
 
 """ Plugin Configuration
 let g:rails_gem_projections = {
