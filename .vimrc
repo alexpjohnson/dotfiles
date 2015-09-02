@@ -116,7 +116,9 @@ hi IncSearch cterm=reverse ctermbg=57 ctermfg=16 gui=reverse guibg=#000000 guifg
 hi Search term=reverse ctermbg=61 ctermfg=16 gui=NONE guibg=#B4EC85 guifg=#000000
 "" Mouse settings
 set mouse=a " Enable mouse
-"set ttymouse=xterm2 " Use mouse scrolling in terminal window
+if !has('nvim')
+  set ttymouse=xterm2 " Use mouse scrolling in terminal window
+endif
 
 """ Plugin Configuration
 let g:rails_gem_projections = {
