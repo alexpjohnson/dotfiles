@@ -22,15 +22,20 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/bin
-export EDITOR='nvim'
+export EDITOR='vim'
 
 export NODE_PATH=/usr/local/lib/node_modules
 export PATH="/usr/local/share/npm/bin:$PATH"
+
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
 
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
 # redis
 export KC_API_REDIS_URL=redis://localhost:6379
+
+export EC2_USERNAME=alex
 
 if [ -d $RBENV_ROOT ]; then
   export PATH="$RBENV_ROOT/bin:$PATH"

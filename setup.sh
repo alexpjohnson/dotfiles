@@ -1,5 +1,5 @@
 # Install brew
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Make sure it is up to date
 brew update
@@ -24,8 +24,8 @@ brew install rbenv
 brew install ruby-build
 
 # Install Ruby
-rbenv install 2.1.5
-rbenv global 2.1.5
+rbenv install 2.2.2
+rbenv global 2.2.2
 
 # Install some gems
 rbenv rehash
@@ -37,4 +37,3 @@ rbenv rehash
 
 # Unpack Dotfiles
 ./unpack.sh
-

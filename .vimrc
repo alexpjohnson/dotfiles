@@ -36,12 +36,15 @@ Bundle 'wesQ3/vim-windowswap'
 Bundle 'bling/vim-airline'
 Bundle 'powerline/fonts'
 Bundle 'gosukiwi/vim-atom-dark'
+Bundle 'elixir-lang/vim-elixir'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
 syntax on " Enable syntax highlighting
 
 set re=1
+
+set nobackup
 
 "" Watches for changes in vim configs and automatically refreshes your .vimrc
 augroup myvimrc
