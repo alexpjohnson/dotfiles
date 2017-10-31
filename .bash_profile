@@ -32,8 +32,6 @@ export NVM_DIR=~/.nvm
 
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
-# redis
-export KC_API_REDIS_URL=redis://localhost:6379
 
 export EC2_USERNAME=alex
 
