@@ -19,8 +19,8 @@ alias redis_server="redis-server /usr/local/etc/redis.conf"
 alias rt="bundle exec ruby -Itest"
 alias parallel_setup="RAILS_ENV=test bundle exec rake db:create db:migrate db:test:prepare parallel:create[5] parallel:prepare[5]"
 alias parallel_run="RAILS_ENV=test bundle exec parallel_test test -n 5"
-alias bastion_deploy="BASTION_HOST=qa-bastion.test.kitcheck.com bundle exec cap qa deploy"
 
 greprails() { grep $1 -r --exclude-dir="coverage" --exclude-dir="tmp" $2; }
 far() { find $1 -type f -name '*' -exec sed -i '' s/$2/$3/g {} + ; }
 gitme() { git $1 --author=$(git config --get user.email); }
+bonsai() { git branch --merged "$1" | grep -v "$1$" | xargs git branch -d;}
