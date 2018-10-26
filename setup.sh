@@ -11,7 +11,9 @@ brew install bash-completion
 brew install tree
 
 # Install python
-brew install python
+brew install pyenv
+pyenv install 3.7.0
+pyenv global 3.7.0
 
 # Install vim
 brew install vim
