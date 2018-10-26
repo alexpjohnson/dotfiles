@@ -40,4 +40,9 @@ if [ -d $RBENV_ROOT ]; then
   eval "$(rbenv init -)"
 fi
 
+if [ -d $PYENV_ROOT ]; then
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
+
 export PATH=/usr/local/sbin:$PATH
