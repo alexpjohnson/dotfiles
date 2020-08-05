@@ -6,15 +6,15 @@ base_tools() {
 }
 
 setup_zsh() {
-  if ! [ command -v zsh >/dev/null &2>1 ]; then
+  if ! command -v zsh >/dev/null 2>&1; then
     apt install zsh -y
   fi
 
-  chsh -s $(which zsh)
+  chsh -s "$(which zsh)"
 }
 
 setup_neovim() {
-  if ! [ -x "$(command -v nvim)" >/dev/null 2>&1 ]; then
+  if ! command -v nvim >/dev/null 2>&1; then
     sudo apt install neovim -y
   fi
 }
