@@ -1,0 +1,8 @@
+*.swp
+*.swo
+
+*~
+
+.DS_STORE
+
+.bash_secrets
