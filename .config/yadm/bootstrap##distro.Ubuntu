@@ -2,18 +2,21 @@
 
 
 base_tools() {
+  echo "Installing base dependencies"
   sudo apt install curl -y
 }
 
 setup_zsh() {
+  echo "Installing ZSH"
   if ! command -v zsh >/dev/null 2>&1; then
-    apt install zsh -y
+    sudo apt install zsh -y
   fi
 
   chsh -s "$(which zsh)"
 }
 
 setup_neovim() {
+  echo "Installing Neovim"
   if ! command -v nvim >/dev/null 2>&1; then
     sudo apt install neovim -y
   fi
