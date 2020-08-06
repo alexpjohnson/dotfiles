@@ -3,7 +3,10 @@
 
 base_tools() {
   echo "Installing base dependencies"
-  sudo apt install -y curl
+  sudo apt update && 
+	  sudo apt install -y \
+	    curl \
+	    screen
 }
 
 setup_zsh() {
@@ -26,7 +29,57 @@ setup_zinit() {
   echo "Installing zinit"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 }
+
+setup_jabba() {
+  if ! command -v jabba >/dev/null 2>&1; then
+    echo "Installing Jabba"
+    curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
+  fi
+}
+
+setup_docker() {
+  if ! command -v docker >/dev/null 2>&1; then
+    echo "Installing docker"
+    sudo apt-get -y remove docker docker-engine docker.io containerd runc
+    sudo apt-get install \
+      apt-transport-https \
+      ca-certificates \
+      gnupg-agent \
+      software-properties-common
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    sudo add-apt-repository \
+     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+     $(lsb_release -cs) \
+     stable"
+    sudo apt-get update
+    sudo apt-get install docker-ce docker-ce-cli containerd.io
+    sudo groupadd docker && sudo gpasswd -a $USER docker && newgrp docker
+  fi
+}
+
+setup_rbenv() {
+  if ! command -v rbenv >/dev/null 2>&1; then
+    echo "Installing rbenv"
+    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+  fi
+}
+
+setup_pyenv() {
+  if ! command -v pyenv >/dev/null 2>&1; then
+    echo "Installing pyenv"
+    curl https://pyenv.run | bash
+    git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+  fi
+}
+
+setup_nvm() {
+}
  
 base_tools
 setup_zsh
 setup_neovim
+setup_jabba
+setup_docker
+setup_rbenv
+setup_pyenv
+setup_nvm
